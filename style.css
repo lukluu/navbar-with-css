@@ -40,7 +40,7 @@ header{
 }
 .logo span{
     color: var(--text-color);
-    font-size: 1.1rem;
+    font-size: 1.7rem;
     font-weight: 600;
 }
 .navbar{
@@ -68,5 +68,82 @@ header{
 .main a{
     margin-right: 25px;
     margin-left: 10px;
+    color: var(--text-color);
+    font-size: 1.1rem;
+    font-weight: 500;
+transition: .5s;
+}
+.login{
+    display: flex;
+    align-items: center;
+    border: solid 1px var(--main-color);
+    padding: 5px;
+}
+.login i{
+    color: var(--main-color);
+    margin-right: 3px;
+    transition: .5s;
+}
+.reg{
+    border: solid 1px var(--main-color);
+    padding: 5px; 
+}
+.main a:hover{
+    background-color: var(--main-color);
+    color: var(--text-color);
+}
+.login:hover i{
+    color: var(--text-color);
+}
+#menu-icon{
+    font-size: 1.7rem;
+    cursor: pointer;
+    display: none;
+    z-index: 10000;
+    color: var(--text-color);
+}
 
+
+@media (max-width:1280px){
+    header{
+        padding: 14px 2% ;
+    }
+    .navbar a{
+        padding: 5px 0;
+        margin: 0 20px;
+    }
+}
+@media (max-width:950px){
+    #menu-icon{
+        display: block;
+    }
+    .navbar{
+        position:absolute;
+        top :100%;
+        right: -100%;
+        width: 270px;
+        background-color: var(--main-color);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        border-radius: 10px;
+        transition: .5s;
+
+    }
+    .navbar a{
+        display: block;
+        margin: 12px 0;
+        padding: 0 25px;
+        transition: .5s;
+    }
+    .navbar a:hover{
+        color: var(--text-color);
+        transform: translateY(5px) ;
+    }
+    .navbar a.active{
+        color: var(--text-color);
+    }
+    .navbar.open{
+        right: 2%;
+    }
 }
